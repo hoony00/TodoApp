@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class TodoFragment extends StatefulWidget {
-  const TodoFragment({super.key});
+class SearchFragment extends StatefulWidget {
+  const SearchFragment({super.key});
 
   @override
-  State<TodoFragment> createState() => _TodoFragmentState();
+  State<SearchFragment> createState() => _SearchFragmentState();
 }
 
-class _TodoFragmentState extends State<TodoFragment> {
+class _SearchFragmentState extends State<SearchFragment> {
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
