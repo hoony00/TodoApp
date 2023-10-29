@@ -1,4 +1,4 @@
-# fast_app_base
+# Todo App
 
 A new Flutter project.
 
