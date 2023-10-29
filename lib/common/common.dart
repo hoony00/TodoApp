@@ -17,6 +17,7 @@ export 'util/async.dart';
 export 'widget/w_height_and_width.dart';
 export 'widget/w_line.dart';
 export 'widget/w_tap.dart';
+export 'widget/constant_widget.dart';
 
 const defaultFontStyle = GoogleFonts.ptSerif;
 

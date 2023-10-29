@@ -9,7 +9,6 @@ import '../../../screen/dialog/d_message.dart';
 import '../../common/common.dart';
 import '../../common/language/language.dart';
 import '../../common/theme/theme_util.dart';
-import '../../common/widget/w_empty_expanded.dart';
 import '../../common/widget/w_mode_switch.dart';
 
 class MenuDrawer extends StatefulWidget {
@@ -106,7 +105,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
             },
           ),
           const Line(),
-          isSmallScreen(context) ? const Height(10) : const EmptyExpanded(),
+          isSmallScreen(context) ? const Height(10) : spacer,
           MouseRegion(
             cursor: SystemMouseCursors.click,
             child: ModeSwitch(
