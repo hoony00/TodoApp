@@ -10,5 +10,9 @@ class TodoDataNotifier extends ValueNotifier<List<Todo>> {
     notifyListeners();
   }
 
+  void notify(){
+    notifyListeners();
+  }
+
 
 }

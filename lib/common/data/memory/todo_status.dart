@@ -4,6 +4,5 @@ enum TodoStatus{
   // 진행 완료
   complete,
   // 진행 중
-  ongoing,
-
+  ongoing
 }
