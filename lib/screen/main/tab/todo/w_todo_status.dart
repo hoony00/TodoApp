@@ -16,22 +16,18 @@ class TodoStatusWidget extends StatelessWidget {
       child: SizedBox(
         width: 50,
         height: 50,
-        child: SizedBox(
-          height: 50,
-          width: 50,
-          child: switch (todo.status) {
-            TodoStatus.complete => Checkbox(
-              value: true,
-              onChanged: null,
-              fillColor: MaterialStateProperty.all(context.appColors.checkBoxColor),
-            ),
-            TodoStatus.incomplete =>  Checkbox(
-              value: false,
-              onChanged: null,
-            ),
-            TodoStatus.ongoing =>  Fire(),
-          },
-        ),
+        child: switch (todo.status) {
+          TodoStatus.complete => Checkbox(
+            value: true,
+            onChanged: null,
+            fillColor: MaterialStateProperty.all(context.appColors.checkBoxColor),
+          ),
+          TodoStatus.incomplete =>  const Checkbox(
+            value: false,
+            onChanged: null,
+          ),
+          TodoStatus.ongoing =>  const Fire(),
+        },
       ),
     );
   }

@@ -29,10 +29,8 @@ class TodoDataHolder extends InheritedWidget {
   void changeTodoStatus(Todo todo) async {
     switch (todo.status) {
       case TodoStatus.incomplete:
-        print("incomplete 눌림");
         todo.status = TodoStatus.ongoing;
       case TodoStatus.ongoing:
-        print("ongoint 눌림");
         todo.status = TodoStatus.complete;
       case TodoStatus.complete:
         final result =
@@ -53,6 +51,20 @@ class TodoDataHolder extends InheritedWidget {
         dueDate: result.dateTime,
       ));
     }
+  }
+
+  void editTodo(Todo todo) async {
+    final result = await WriteTodoDialog(todoForEdit: todo).show();
+    if (result != null) {
+      todo.title = result.text;
+      todo.dueDate = result.dateTime;
+      notifier.notify();
+    }
+  }
+
+  void removeTodo(Todo todo) {
+    notifier.value.remove(todo);
+    notifier.notify();
   }
 }
 

@@ -56,7 +56,6 @@ class MainScreenState extends State<MainScreen>
         floatingActionButton: FloatingActionButton(
           onPressed: () async {
             context.holder.addTodo();
-
           },
           child: const Icon(EvaIcons.plus),
         ),
