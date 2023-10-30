@@ -5,7 +5,7 @@ import 'package:fast_app_base/screen/dialog/d_confirm.dart';
 import 'package:flutter/material.dart';
 
 import '../../../screen/main/write/d_write_todo.dart';
-
+// InheritedWidget를 이용한 상태관리 끝 - 1031(화) 오전 12시
 class TodoDataHolder extends InheritedWidget {
   final TodoDataNotifier notifier;
 
