@@ -1,8 +1,9 @@
 # Todo App
+![TodoAppImg](https://github.com/hoony00/TodoApp/assets/86902854/be4f7a57-ae97-4a51-8f25-1644114ecdc0.png)
 
 
 
-# 플러터 프로젝트 내 전용 yaml 시작 패지키
+플러터 프로젝트 내 전용 yaml 시작 패지키
 
   #util
   velocity_x: ^4.1.1
