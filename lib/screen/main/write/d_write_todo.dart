@@ -60,7 +60,6 @@ class _WriteTodoDialogState extends DialogState<WriteTodoDialog> with AfterLayou
                 )),
                 RoundButton(text: isEditMdoe? '완료' : '추가', onTap: () {
                   widget.hide(WriteTodoResult(_selectedDate, textController.text));
-
                 }),
               ],
             ),

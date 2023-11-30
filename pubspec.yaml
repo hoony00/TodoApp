@@ -17,7 +17,6 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
 version: 1.0.0+1
-isar_version: &isar_version 3.0.5
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -51,12 +50,11 @@ dependencies:
 
   #data
   shared_preferences: ^2.0.15
-  isar: *isar_version
-  isar_flutter_libs: *isar_version
 
   #architecture
   event_bus: ^2.0.0
   get: ^4.6.5
+
 
   #ui - resource
   eva_icons_flutter: ^3.1.0
@@ -80,6 +78,9 @@ dependencies:
   json_annotation: ^4.8.0
   rive: ^0.11.11
   path_provider: ^2.0.15
+  flutter_bloc: ^8.1.3
+  freezed: ^2.3.4
+  freezed_annotation: ^2.2.0
 
 dev_dependencies:
   flutter_test:
@@ -94,7 +95,6 @@ dev_dependencies:
   retrofit_generator: '5.0.0'
   build_runner: '2.3.3'
   json_serializable: ^6.6.1
-  isar_generator: *isar_version
   mock_web_server: ^5.0.0-nullsafety.1
   test: ^1.22.0
 

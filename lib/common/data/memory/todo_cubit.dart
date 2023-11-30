@@ -1,12 +1,19 @@
+import 'package:fast_app_base/common/data/memory/bloc/bloc_status.dart';
+import 'package:fast_app_base/common/data/memory/bloc/todo_bloc_state.dart';
 import 'package:fast_app_base/common/data/memory/todo_status.dart';
 import 'package:fast_app_base/common/data/memory/vo_todo.dart';
 import 'package:fast_app_base/screen/dialog/d_confirm.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 
 import '../../../screen/main/write/d_write_todo.dart';
 // InheritedWidget를 이용한 상태관리 끝 - 1031(화) 오전 12시
-class TodoDataHolder extends GetxController {
+class TodoCuit extends Cubit<TodoBlocState> {
   final RxList<Todo> todoList = <Todo>[].obs;
+
+  TodoCuit() : super(const TodoBlocState(BlocStatus.initial, <Todo>[]));
+
+
 
   void changeTodoStatus(Todo todo) async {
     switch (todo.status) {
@@ -50,6 +57,4 @@ class TodoDataHolder extends GetxController {
   }
 }
 
-mixin class TodoDataProvier {
-  late final TodoDataHolder todoData =  Get.find();
-}
+
