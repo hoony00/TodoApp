@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 
 import '../../../../common/data/memory/vo_todo.dart';
 
-class TodoStatusWidget extends StatelessWidget with TodoDataProvier {
+class TodoStatusWidget extends StatelessWidget {
   final Todo todo;
-   TodoStatusWidget(this.todo, {super.key});
+    TodoStatusWidget(this.todo, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return Tap(
-      onTap: () { todoData.changeTodoStatus(todo); },
+      onTap: () { context.readTodoCuibit.changeTodoStatus(todo); },
       child: SizedBox(
         width: 50,
         height: 50,

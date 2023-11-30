@@ -7,16 +7,16 @@ import 'package:flutter/material.dart';
 
 import '../../../../common/data/memory/vo_todo.dart';
 
-class TodoItem extends StatelessWidget with TodoDataProvier{
+class TodoItem extends StatelessWidget {
   final Todo todo;
 
-   TodoItem(this.todo, {super.key});
+   const TodoItem(this.todo, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return Dismissible(
       onDismissed: (direction) {
-        todoData.removeTodo(todo);
+        context.readTodoCuibit.removeTodo(todo);
       },
       background: RoundedContainer(
         color: context.appColors.removeTodoBg,
@@ -45,14 +45,14 @@ class TodoItem extends StatelessWidget with TodoDataProvier{
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            todo.dueDate.relativeDays.text.make(),
+            todo.dueDate.formattedTime.text.make(),
             Row(
               children: [
                 TodoStatusWidget(todo),
                 Expanded(child: todo.title.text.size(20).medium.make()),
                 IconButton(
                     onPressed: () async {
-                      todoData.editTodo(todo);
+                      context.readTodoCuibit.editTodo(todo);
                     },
                     icon: const Icon(EvaIcons.editOutline)),
               ],
